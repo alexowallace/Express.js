@@ -25,7 +25,7 @@ app.use(myLogger);
 
 //static router//file named static
 app.use(express.static(path.join(__dirname, "static")));
-// app.use(express.static("public"));
+app.use(express.static("public"));
 app.use('/', require(path.join(__dirname,'routes/blog.js')))
 
 
