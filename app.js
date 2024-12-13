@@ -19,11 +19,11 @@ app.use(myLogger);
 
 
 //express router
-// const birds = require("./birds.js");
-// app.use("/birds", birds);
+const birds = require("./birds.js");
+app.use("/birds", birds);
 
 
-//static router//file named static
+// static router//file named static
 app.use(express.static(path.join(__dirname, "static")));
 app.use(express.static("public"));
 app.use('/', require(path.join(__dirname,'routes/blog.js')))
